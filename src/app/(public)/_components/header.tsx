@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/sheet";
 import { Menu, LogIn } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
+import logo from "../../../../public/logo-umbrella-health.png";
 
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +55,7 @@ export function Header() {
     <header className="fixed top-0 right-0 left-0 z-[999] py-4 px-6 bg-white">
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="text-3xl font-bold text-zinc-900">
-          SaaS Pro
+          <Image src={logo} alt="Logo" width={130} className="" />
         </Link>
         <nav className="hidden md:flex items-center">
           <NavLinks />
